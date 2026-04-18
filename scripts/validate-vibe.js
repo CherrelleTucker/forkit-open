@@ -700,7 +700,10 @@ if (fs.existsSync(appJsonPath)) {
         const lines = source.split('\n');
         for (let i = 0; i < lines.length; i++) {
           if (/initConnection\(/.test(lines[i])) {
-            const context = lines.slice(Math.max(0, i - 10), i + 1).join('\n');
+            // Widened to 30 lines so the Platform.OS guard at the enclosing
+            // useEffect scope is visible (typical layout: guard near hook entry,
+            // retry helpers defined inside, initConnection called deep).
+            const context = lines.slice(Math.max(0, i - 30), i + 1).join('\n');
             if (
               !/Platform\.OS/.test(context) &&
               !/!== ['"]web['"]/.test(context) &&
@@ -830,7 +833,9 @@ for (const file of jsFiles) {
   // Check that purchase calls are wrapped in try/catch
   for (let i = 0; i < lines.length; i++) {
     if (/requestSubscription\(|requestPurchase\(|purchasePackage\(/.test(lines[i])) {
-      const context = lines.slice(Math.max(0, i - 5), i + 1).join('\n');
+      // Widened to 15 lines so a single try { ... } wrapping multiple
+      // platform branches (ios vs android requestPurchase shapes) is detected.
+      const context = lines.slice(Math.max(0, i - 15), i + 1).join('\n');
       if (!/try\s*\{/.test(context)) {
         error(14, `${rel}:${i + 1} — Purchase call without try/catch error handling`);
       }
