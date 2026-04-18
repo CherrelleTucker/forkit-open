@@ -4,6 +4,12 @@ Thanks for taking a look. This is a single-maintainer project, so please read be
 
 ---
 
+## Looking for something to work on?
+
+Browse open issues in the feedback tracker: **[CherrelleTucker/forkit-feedback](https://github.com/CherrelleTucker/forkit-feedback/issues)**. That's where user-reported bugs and feature requests live. Anything tagged `bug` or `enhancement` is fair game — just leave a quick comment claiming it before you start so we don't duplicate work.
+
+---
+
 ## Before you start
 
 - **Bug reports and feature requests don't go here.** File them at [CherrelleTucker/forkit-feedback](https://github.com/CherrelleTucker/forkit-feedback/issues) — that's the public tracker where non-developers can file too.
