@@ -1,0 +1,91 @@
+{
+  "identifier" : "",
+  "nonRenewableSubscriptions" : [
+
+  ],
+  "products" : [
+
+  ],
+  "settings" : {
+    "_applicationInternalID" : "6759990349",
+    "_developerTeamID" : "TJAC78FFA8",
+    "_failTransactionsEnabled" : false,
+    "_lastError" : "",
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+
+    ]
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21580498",
+      "localizations" : [
+
+      ],
+      "name" : "ForkIt Pro",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "1.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6759990350",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Unlimited searches and group sessions",
+              "displayName" : "Pro Monthly",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.ctuckersolutions.forkit.pro.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Pro Monthly",
+          "subscriptionGroupID" : "21580498",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "codeOffers" : [
+
+          ],
+          "displayPrice" : "14.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6759990351",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Unlimited searches and group sessions — save 37%",
+              "displayName" : "Pro Annual",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.ctuckersolutions.forkit.pro.annual",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Pro Annual",
+          "subscriptionGroupID" : "21580498",
+          "type" : "RecurringSubscription",
+          "winbackOffers" : [
+
+          ]
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

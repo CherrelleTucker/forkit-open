@@ -1,0 +1,94 @@
+{
+  "expo": {
+    "name": "ForkIt!",
+    "slug": "forkit",
+    "version": "4.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "scheme": "forkit",
+    "newArchEnabled": true,
+    "description": "Fork indecision. Random restaurant picker — just tap and we'll choose for you.",
+    "privacy": "https://CherrelleTucker.github.io/forkit/privacy.html",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0B0B0F"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.ctuckersolutions.forkit",
+      "buildNumber": "39",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "ForkIt needs your location to find nearby restaurants and help you decide where to eat.",
+        "CFBundleAllowMixedLocalizations": true,
+        "ITSAppUsesNonExemptEncryption": false
+      },
+      "associatedDomains": ["applinks:forkit-web.vercel.app"]
+    },
+    "android": {
+      "package": "com.forkit.app",
+      "versionCode": 38,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0B0B0F"
+      },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "INTERNET",
+        "com.android.vending.BILLING"
+      ],
+      "edgeToEdgeEnabled": true,
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "forkit-web.vercel.app",
+              "pathPrefix": "/group"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "ForkIt needs your location to find nearby restaurants and help you decide where to eat."
+        }
+      ],
+      [
+        "@sentry/react-native/expo",
+        {
+          "url": "https://sentry.io/",
+          "organization": "ctuckersolutions",
+          "project": "react-native"
+        }
+      ],
+      "expo-font",
+      "expo-sharing",
+      "react-native-iap"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "0abe90d5-587c-4918-ad8b-7d472c687ace"
+      }
+    },
+    "owner": "cjtucker",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/0abe90d5-587c-4918-ad8b-7d472c687ace"
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "identifier" : "ForkItStoreKit",
+  "nonRenewingSubscriptions" : [],
+  "products" : [],
+  "settings" : {
+    "_applicationInternalID" : "6759990349",
+    "_developerTeamID" : "TJAC78FFA8",
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : []
+  },
+  "subscriptionGroups" : [
+    {
+      "id" : "21580498",
+      "localizations" : [],
+      "name" : "ForkIt Pro",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [],
+          "codeOffers" : [],
+          "displayPrice" : "1.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6759990350",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "20 searches/mo, 3 group sessions",
+              "displayName" : "ForkIt! Pro Monthly",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.ctuckersolutions.forkit.pro.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Pro Monthly",
+          "subscriptionGroupID" : "21580498",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [],
+          "codeOffers" : [],
+          "displayPrice" : "14.99",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "6759990351",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "20 searches/mo, 3 group sessions — annual",
+              "displayName" : "ForkIt! Pro Annual",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.ctuckersolutions.forkit.pro.annual",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Pro Annual",
+          "subscriptionGroupID" : "21580498",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [],
+          "codeOffers" : [],
+          "displayPrice" : "4.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "6759990352",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Unlimited searches, sessions, and cloud sync",
+              "displayName" : "ForkIt! Pro+ Monthly",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.ctuckersolutions.forkit.pro_plus.monthly",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Pro+ Monthly",
+          "subscriptionGroupID" : "21580498",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [],
+          "codeOffers" : [],
+          "displayPrice" : "39.99",
+          "familyShareable" : false,
+          "groupNumber" : 2,
+          "internalID" : "6759990353",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "Unlimited searches, sessions, and cloud sync — annual",
+              "displayName" : "ForkIt! Pro+ Annual",
+              "locale" : "en_US"
+            }
+          ],
+          "productID" : "com.ctuckersolutions.forkit.pro_plus.annual",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Pro+ Annual",
+          "subscriptionGroupID" : "21580498",
+          "type" : "RecurringSubscription"
+        }
+      ]
+    }
+  ],
+  "version" : {
+    "major" : 4,
+    "minor" : 0
+  }
+}

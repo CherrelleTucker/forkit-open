@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Expo
+.expo/
+dist/
+web-build/
+
+# iOS
+ios/build/
+ios/Pods/
+ios/DerivedData/
+ios/.xcode.env.local
+
+# Android
+android/app/.cxx/
+android/app/build/
+android/build/
+android/.gradle/
+android/local.properties
+
+# Private keys & credentials
+*.p8
+*service-account*.json
+sentry.properties
+**/sentry.properties
+
+# Build artifacts
+build/
+*.tar.gz
+*.app/
+*.aab
+*.apk
+*.ipa
+
+# Test output
+coverage/
+test-push.apns
+
+# iOS crash logs (contain runtime tokens + PII)
+*.ips
+**/crashlog/
+
+# Temp / scratch assets
+assets/icon-new.png
+assets/icon-temp.png
+
+# OS files
+.DS_Store
+
+# IDE / tooling
+.vscode/
+.idea/
+.claude/
+tmpclaude-*

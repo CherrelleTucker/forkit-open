@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Bug report
+    url: https://github.com/CherrelleTucker/forkit-feedback/issues/new?template=bug_report.md
+    about: Report a bug in the published app (crashes, wrong results, UI glitches). These go in the feedback tracker, not this repo.
+  - name: Feature request
+    url: https://github.com/CherrelleTucker/forkit-feedback/issues/new?template=feature_request.md
+    about: Suggest a feature or improvement. File it in the feedback tracker so non-developers can comment too.
+  - name: Security vulnerability
+    url: https://github.com/CherrelleTucker/forkit-open/security/advisories/new
+    about: Privately report a security issue. Do NOT file a public issue for security problems.

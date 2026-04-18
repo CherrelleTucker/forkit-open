@@ -1,0 +1,73 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Cancel in-progress runs for the same branch/PR when a new commit is pushed.
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    name: Quality checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # full history so gitleaks can scan
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint (zero warnings)
+        run: npm run lint:strict
+
+      - name: Format check
+        run: npm run format:check
+
+      - name: Secrets scan (secretlint)
+        run: npm run secrets
+
+      - name: Dependency audit
+        run: npm run audit
+
+      - name: Tests
+        run: npm test -- --ci --reporters=default --reporters=github-actions
+
+      # The following checks are opinionated/aspirational. They run here for
+      # visibility but do not block the build — they are the "would-be-nice"
+      # standard, not the minimum bar. Run `npm run review` locally to enforce.
+      - name: AI-pitfall validator (non-blocking)
+        run: npm run validate-vibe
+        continue-on-error: true
+
+      - name: Dead-code scan (non-blocking)
+        run: npm run dead-code
+        continue-on-error: true
+
+      - name: Doc consistency (non-blocking)
+        run: npm run validate-docs
+        continue-on-error: true
+
+  gitleaks:
+    name: Secret scan (gitleaks)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: gitleaks/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

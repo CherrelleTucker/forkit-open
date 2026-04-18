@@ -1,0 +1,17 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "entry": ["App.js", "components/*.js", "utils/*.js", "constants/*.js", "hooks/*.js"],
+  "ignore": ["coverage/**", "metro.config.js"],
+  "ignoreDependencies": [
+    "expo-linking",
+    "expo-system-ui",
+    "@babel/core",
+    "babel-jest",
+    "husky",
+    "lint-staged",
+    "eslint-config-prettier",
+    "@secretlint/core",
+    "@secretlint/secretlint-rule-preset-recommend",
+    "react-dom"
+  ]
+}

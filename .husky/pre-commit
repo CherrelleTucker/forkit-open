@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# forkit-open pre-commit hook
+# 1. Secret scan (gitleaks) — blocks secret patterns before they enter history
+# 2. lint-staged — runs configured linters/formatters on changed files
+
+if ! command -v gitleaks >/dev/null 2>&1; then
+  echo "✗ gitleaks not installed — install with: brew install gitleaks"
+  echo "  (or see https://github.com/gitleaks/gitleaks#installing)"
+  echo "  This hook blocks commits to prevent credential leaks."
+  exit 1
+fi
+
+gitleaks git --staged --no-banner --redact --verbose || {
+  echo ""
+  echo "✗ Secret detected in staged changes — commit blocked."
+  echo "  Remove the secret, then 'git add' the fix and retry."
+  echo "  False positive? Add the fingerprint to .gitleaksignore."
+  exit 1
+}
+
+npx lint-staged
