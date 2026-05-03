@@ -1,10 +1,12 @@
 # ForkIt!
 
+> **Archived 2026-05-02.** This repository is a frozen public snapshot of the ForkIt! React Native client. Active development continues privately; the live app is unaffected and remains available on the App Store and Google Play. Bug reports go to [forkit-feedback](https://github.com/CherrelleTucker/forkit-feedback/issues), not here.
+
 **Can't decide where to eat? F...ork it. Let fate decide.**
 
-ForkIt! is a random restaurant picker that removes decision fatigue. One tap, one random restaurant nearby, done. Skip the chains, find a local spot, bring friends along for a group pick — or just shut the door on the "I don't know, what do *you* want?" loop.
+ForkIt! is a random restaurant picker that removes decision fatigue. One tap, one random restaurant nearby, done. Skip the chains, find a local spot, bring friends along for a group pick (or just shut the door on the "I don't know, what do *you* want?" loop).
 
-[Google Play](https://play.google.com/store/apps/details?id=com.forkit.app) · [App Store](https://apps.apple.com/app/forkit-restaurant-picker/id6759990349) · [forkaround.io](https://forkaround.io)
+[Google Play](https://play.google.com/store/apps/details?id=com.forkit.appapp) · [App Store](https://apps.apple.com/app/forkit-restaurant-picker/id6759990349) · [forkaround.io](https://forkaround.io)
 
 ---
 
